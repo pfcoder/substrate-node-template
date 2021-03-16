@@ -23,6 +23,7 @@ version = '2.0.0'
 [dependencies]
 hex-literal = { optional = true, version = '0.3.1' }
 serde = { features = ['derive'], optional = true, version = '1.0.119' }
+static_assertions = "1.1.0"
 
 # local dependencies
 pallet-template = { path = '../pallets/template', default-features = false, version = '3.0.0' }
@@ -35,21 +36,37 @@ frame-system = { default-features = false, version = '3.0.0' }
 frame-system-benchmarking = { default-features = false, optional = true, version = '3.0.0' }
 frame-system-rpc-runtime-api = { default-features = false, version = '3.0.0' }
 pallet-aura = { default-features = false, version = '3.0.0' }
+pallet-authorship = { version = "3.0.0", default-features = false }
+pallet-authority-discovery = { version = "3.0.0", default-features = false }
+pallet-babe = { default-features = false, version = "3.0.0" }
 pallet-balances = { default-features = false, version = '3.0.0' }
+pallet-bounties = { version = "3.0.0", default-features = false }
+pallet-collective = { default-features = false, version = "3.0.0" }
+pallet-election-provider-multi-phase = { git = "https://github.com/paritytech/substrate", version = '3.0.0', default-features = false }
+pallet-elections-phragmen = { default-features = false, version = "3.0.0" }
 pallet-grandpa = { default-features = false, version = '3.0.0' }
+pallet-im-online = { version = "3.0.0", default-features = false }
+pallet-offences = { version = "3.0.0", default-features = false }
 pallet-randomness-collective-flip = { default-features = false, version = '3.0.0' }
+pallet-session = { version = "3.0.0", features = ["historical"], default-features = false }
+pallet-staking = { default-features = false, version = "3.0.0" }
+pallet-staking-reward-curve = { default-features = false, version = "3.0.0" }
 pallet-sudo = { default-features = false, version = '3.0.0' }
 pallet-timestamp = { default-features = false, version = '3.0.0' }
 pallet-transaction-payment = { default-features = false, version = '3.0.0' }
 pallet-transaction-payment-rpc-runtime-api = { default-features = false, version = '3.0.0' }
+pallet-treasury = { default-features = false, version = "3.0.0" }
 sp-api = { default-features = false, version = '3.0.0' }
 sp-block-builder = { default-features = false, version = '3.0.0' }
 sp-consensus-aura = { default-features = false, version = '0.9.0' }
+sp-consensus-babe = { version = "0.9.0", default-features = false }
+sp-authority-discovery = { version = "3.0.0", default-features = false }
 sp-core = { default-features = false, version = '3.0.0' }
 sp-inherents = { default-features = false, version = '3.0.0' }
 sp-offchain = { default-features = false, version = '3.0.0' }
 sp-runtime = { default-features = false, version = '3.0.0' }
 sp-session = { default-features = false, version = '3.0.0' }
+sp-staking = { default-features = false, version = "3.0.0" }
 sp-std = { default-features = false, version = '3.0.0' }
 sp-transaction-pool = { default-features = false, version = '3.0.0' }
 sp-version = { default-features = false, version = '3.0.0' }
@@ -74,14 +91,26 @@ std = [
     'frame-system/std',
     'frame-system-rpc-runtime-api/std',
     'pallet-aura/std',
+    'pallet-authorship/std',
+    'pallet-authority-discovery/std',
+    'pallet-babe/std',
     'pallet-balances/std',
+    'pallet-bounties/std',
+    'pallet-collective/std',
     'pallet-grandpa/std',
+    "pallet-im-online/std",
+    'pallet-offences/std',
     'pallet-randomness-collective-flip/std',
+    'pallet-session/std',
+    'pallet-staking/std',
     'pallet-sudo/std',
     'pallet-template/std',
     'pallet-timestamp/std',
     'pallet-transaction-payment/std',
+    'pallet-treasury/std',
     'pallet-transaction-payment-rpc-runtime-api/std',
+    'pallet-election-provider-multi-phase/std',
+    'pallet-elections-phragmen/std',
     'sp-api/std',
     'sp-block-builder/std',
     'sp-consensus-aura/std',
@@ -93,4 +122,5 @@ std = [
     'sp-std/std',
     'sp-transaction-pool/std',
     'sp-version/std',
+    "sp-staking/std",
 ]

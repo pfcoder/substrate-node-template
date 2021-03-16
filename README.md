@@ -2,6 +2,9 @@
 
 A fresh FRAME-based [Substrate](https://www.substrate.io/) node, ready for hacking :rocket:
 
+#### This branch uses BABE consensus to replace Aura which added below related pallets:  
+babe, session, staking, council, treasury
+
 ## Getting Started
 
 Follow these steps to get started with the Node Template :hammer_and_wrench:
